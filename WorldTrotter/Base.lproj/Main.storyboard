@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2YO-gQ-Oek">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Convert-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ConversionViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,22 +50,123 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.95686274509803915" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="O9b-e2-bRo" firstAttribute="top" secondItem="dt6-bU-hO0" secondAttribute="bottom" constant="8" id="45e-Yu-6aa"/>
-                            <constraint firstItem="Jln-gL-89s" firstAttribute="centerX" secondItem="dt6-bU-hO0" secondAttribute="centerX" id="4P7-Et-2iu"/>
-                            <constraint firstItem="L5S-Li-zGt" firstAttribute="centerX" secondItem="dt6-bU-hO0" secondAttribute="centerX" id="Her-uc-swg"/>
-                            <constraint firstItem="O9b-e2-bRo" firstAttribute="centerX" secondItem="dt6-bU-hO0" secondAttribute="centerX" id="JH3-yW-sKj"/>
-                            <constraint firstItem="4me-gg-mxG" firstAttribute="centerX" secondItem="dt6-bU-hO0" secondAttribute="centerX" id="RAI-ks-ml7"/>
-                            <constraint firstItem="dt6-bU-hO0" firstAttribute="top" secondItem="L5S-Li-zGt" secondAttribute="bottom" constant="8" id="WM4-8i-12C"/>
-                            <constraint firstItem="Jln-gL-89s" firstAttribute="top" secondItem="O9b-e2-bRo" secondAttribute="bottom" constant="8" id="X6k-IG-P4e"/>
-                            <constraint firstItem="4me-gg-mxG" firstAttribute="top" secondItem="Jln-gL-89s" secondAttribute="bottom" constant="8" id="fv3-J2-bpH"/>
-                            <constraint firstItem="L5S-Li-zGt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="lLg-Kw-leG"/>
-                            <constraint firstItem="L5S-Li-zGt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nlR-a6-TkJ"/>
+                            <constraint firstItem="4me-gg-mxG" firstAttribute="top" secondItem="Jln-gL-89s" secondAttribute="bottom" constant="8" id="4AB-N8-mMC"/>
+                            <constraint firstItem="L5S-Li-zGt" firstAttribute="centerX" secondItem="dt6-bU-hO0" secondAttribute="centerX" id="Bt2-Cz-B37"/>
+                            <constraint firstItem="Jln-gL-89s" firstAttribute="top" secondItem="O9b-e2-bRo" secondAttribute="bottom" constant="8" id="HeW-WF-ZzE"/>
+                            <constraint firstItem="dt6-bU-hO0" firstAttribute="top" secondItem="L5S-Li-zGt" secondAttribute="bottom" constant="8" id="Iqg-NV-nfW"/>
+                            <constraint firstItem="4me-gg-mxG" firstAttribute="centerX" secondItem="dt6-bU-hO0" secondAttribute="centerX" id="JIw-Dl-ent"/>
+                            <constraint firstItem="O9b-e2-bRo" firstAttribute="centerX" secondItem="dt6-bU-hO0" secondAttribute="centerX" id="LCY-aC-u65"/>
+                            <constraint firstItem="L5S-Li-zGt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mw9-uk-Ber"/>
+                            <constraint firstItem="Jln-gL-89s" firstAttribute="centerX" secondItem="dt6-bU-hO0" secondAttribute="centerX" id="PeA-2g-YEn"/>
+                            <constraint firstItem="L5S-Li-zGt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="YJc-OV-q5f"/>
+                            <constraint firstItem="O9b-e2-bRo" firstAttribute="top" secondItem="dt6-bU-hO0" secondAttribute="bottom" constant="8" id="a64-VO-bVL"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Convert" image="ConvertIcon" id="xsN-Iu-bX5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140.57971014492756" y="97.767857142857139"/>
+            <point key="canvasLocation" x="720" y="-174"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="P8y-hd-kLr">
+            <objects>
+                <viewController id="Ovc-ag-Pst" customClass="MapViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
+                    <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="5iO-Gj-Gex">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </mapView>
+                    <tabBarItem key="tabBarItem" title="Map" image="MapIcon" id="TC7-pa-g56"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4l2-mb-2yj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="719" y="518"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="NtQ-B4-1HA">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="2YO-gQ-Oek" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ePe-ye-Lgt">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="cZm-Is-FpZ"/>
+                        <segue destination="Ovc-ag-Pst" kind="relationship" relationship="viewControllers" id="72M-V0-UTq"/>
+                        <segue destination="4So-FQ-yZt" kind="relationship" relationship="viewControllers" id="GAm-LF-bxW"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="33M-eH-dzb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-317" y="145"/>
+        </scene>
+        <!--Quiz-->
+        <scene sceneID="MyP-dG-Bjf">
+            <objects>
+                <viewController id="4So-FQ-yZt" customClass="QuizViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wc9-EA-WAF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6H-dx-gQ7">
+                                <rect key="frame" x="194.5" y="116" width="25" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jz-BD-gh1">
+                                <rect key="frame" x="194.5" y="342" width="25" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7v-Ac-d68">
+                                <rect key="frame" x="158" y="153" width="98" height="30"/>
+                                <state key="normal" title="Next Question"/>
+                                <connections>
+                                    <action selector="showNextQuestion:" destination="4So-FQ-yZt" eventType="touchUpInside" id="eBy-KW-8BR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xj2-81-ezd">
+                                <rect key="frame" x="160.5" y="371" width="93" height="30"/>
+                                <state key="normal" title="Show Answer"/>
+                                <connections>
+                                    <action selector="showAnswer:" destination="4So-FQ-yZt" eventType="touchUpInside" id="Jlf-LX-f2a"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="phD-4l-Okd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="m6H-dx-gQ7" firstAttribute="top" secondItem="phD-4l-Okd" secondAttribute="top" constant="72" id="4x0-Ty-ybC"/>
+                            <constraint firstItem="xj2-81-ezd" firstAttribute="centerX" secondItem="Z7v-Ac-d68" secondAttribute="centerX" id="JLr-59-o7K"/>
+                            <constraint firstItem="xj2-81-ezd" firstAttribute="top" secondItem="0jz-BD-gh1" secondAttribute="bottom" constant="8" symbolic="YES" id="Psv-wd-xhE"/>
+                            <constraint firstItem="m6H-dx-gQ7" firstAttribute="centerX" secondItem="wc9-EA-WAF" secondAttribute="centerX" id="RIt-Ta-9xb"/>
+                            <constraint firstItem="m6H-dx-gQ7" firstAttribute="centerX" secondItem="Z7v-Ac-d68" secondAttribute="centerX" id="TsU-Qz-d08"/>
+                            <constraint firstItem="Z7v-Ac-d68" firstAttribute="top" secondItem="m6H-dx-gQ7" secondAttribute="bottom" constant="16" id="aVL-u8-Lo6"/>
+                            <constraint firstItem="0jz-BD-gh1" firstAttribute="centerX" secondItem="Z7v-Ac-d68" secondAttribute="centerX" id="dsa-Zx-CZD"/>
+                            <constraint firstItem="0jz-BD-gh1" firstAttribute="top" secondItem="Z7v-Ac-d68" secondAttribute="bottom" constant="159" id="hNu-y6-dp6"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Quiz" image="graduationcap" catalog="system" id="G7k-hO-MAt"/>
+                    <connections>
+                        <outlet property="answerLabel" destination="0jz-BD-gh1" id="KVn-kY-zwA"/>
+                        <outlet property="questionLabel" destination="m6H-dx-gQ7" id="afr-bB-ZUA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IqR-FI-vaU" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="719" y="1310"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ConvertIcon" width="48.5" height="32.5"/>
+        <image name="MapIcon" width="48.5" height="32.5"/>
+        <image name="graduationcap" catalog="system" width="128" height="106"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

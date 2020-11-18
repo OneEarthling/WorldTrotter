@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		CE99AB392563B63B00EB79D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99AB382563B63B00EB79D7 /* AppDelegate.swift */; };
 		CE99AB3B2563B63B00EB79D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99AB3A2563B63B00EB79D7 /* SceneDelegate.swift */; };
-		CE99AB3D2563B63B00EB79D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99AB3C2563B63B00EB79D7 /* ViewController.swift */; };
+		CE99AB3D2563B63B00EB79D7 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99AB3C2563B63B00EB79D7 /* ConversionViewController.swift */; };
 		CE99AB402563B63B00EB79D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE99AB3E2563B63B00EB79D7 /* Main.storyboard */; };
 		CE99AB422563B63D00EB79D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE99AB412563B63D00EB79D7 /* Assets.xcassets */; };
 		CE99AB452563B63D00EB79D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE99AB432563B63D00EB79D7 /* LaunchScreen.storyboard */; };
 		CE99AB502563B63E00EB79D7 /* WorldTrotterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99AB4F2563B63E00EB79D7 /* WorldTrotterTests.swift */; };
 		CE99AB5B2563B63E00EB79D7 /* WorldTrotterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99AB5A2563B63E00EB79D7 /* WorldTrotterUITests.swift */; };
+		CE99AB6C2564F23200EB79D7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99AB6B2564F23200EB79D7 /* MapViewController.swift */; };
+		CE99AB742564FA0400EB79D7 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99AB732564FA0400EB79D7 /* QuizViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,7 @@
 		CE99AB352563B63B00EB79D7 /* WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE99AB382563B63B00EB79D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE99AB3A2563B63B00EB79D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE99AB3C2563B63B00EB79D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE99AB3C2563B63B00EB79D7 /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
 		CE99AB3F2563B63B00EB79D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE99AB412563B63D00EB79D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE99AB442563B63D00EB79D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		CE99AB562563B63E00EB79D7 /* WorldTrotterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldTrotterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE99AB5A2563B63E00EB79D7 /* WorldTrotterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTrotterUITests.swift; sourceTree = "<group>"; };
 		CE99AB5C2563B63E00EB79D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE99AB6B2564F23200EB79D7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CE99AB732564FA0400EB79D7 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +105,13 @@
 			children = (
 				CE99AB382563B63B00EB79D7 /* AppDelegate.swift */,
 				CE99AB3A2563B63B00EB79D7 /* SceneDelegate.swift */,
-				CE99AB3C2563B63B00EB79D7 /* ViewController.swift */,
+				CE99AB3C2563B63B00EB79D7 /* ConversionViewController.swift */,
 				CE99AB3E2563B63B00EB79D7 /* Main.storyboard */,
 				CE99AB412563B63D00EB79D7 /* Assets.xcassets */,
 				CE99AB432563B63D00EB79D7 /* LaunchScreen.storyboard */,
 				CE99AB462563B63D00EB79D7 /* Info.plist */,
+				CE99AB6B2564F23200EB79D7 /* MapViewController.swift */,
+				CE99AB732564FA0400EB79D7 /* QuizViewController.swift */,
 			);
 			path = WorldTrotter;
 			sourceTree = "<group>";
@@ -258,9 +264,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE99AB3D2563B63B00EB79D7 /* ViewController.swift in Sources */,
+				CE99AB742564FA0400EB79D7 /* QuizViewController.swift in Sources */,
+				CE99AB3D2563B63B00EB79D7 /* ConversionViewController.swift in Sources */,
 				CE99AB392563B63B00EB79D7 /* AppDelegate.swift in Sources */,
 				CE99AB3B2563B63B00EB79D7 /* SceneDelegate.swift in Sources */,
+				CE99AB6C2564F23200EB79D7 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
