@@ -34,6 +34,34 @@ class MapViewController: UIViewController {
         topConstraint.isActive = true
         leadingConstraint.isActive = true
         trailingConstraint.isActive = true
+        
+        // adding toggle
+        let label = UILabel()
+        let toggle = UISwitch()
+        label.text = "Points of Interest"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        toggle.translatesAutoresizingMaskIntoConstraints = false
+        toggle.addTarget(self, action: #selector(toggleChanged(_:)), for: .valueChanged)
+
+        view.addSubview(label)
+        view.addSubview(toggle)
+        
+        let labelTopConstraint = label.topAnchor.constraint(equalTo: segmentedControl.bottomAnchor, constant: 8)
+        let labelLeadingConstraint = label.leadingAnchor.constraint(equalTo: segmentedControl.leadingAnchor)
+        let toggleTopConstraint = toggle.centerYAnchor.constraint(equalTo: label.centerYAnchor)
+        let toggleLeadingConstraint = toggle.leadingAnchor.constraint(equalTo: label.trailingAnchor, constant: 8)
+        labelTopConstraint.isActive = true
+        labelLeadingConstraint.isActive = true
+        toggleTopConstraint.isActive = true
+        toggleLeadingConstraint.isActive = true
+    }
+    
+    @objc func toggleChanged(_ toggle: UISwitch){
+        if toggle.isOn {
+            mapView.pointOfInterestFilter = .includingAll
+        } else {
+            mapView.pointOfInterestFilter = .excludingAll
+        }
     }
     
     @objc func mapTypeChanged(_ segControl: UISegmentedControl) {
