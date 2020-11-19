@@ -7,36 +7,68 @@
 
 import UIKit
 
-class ConversionViewController: UIViewController {
+class ConversionViewController: UIViewController, UITextFieldDelegate {
     //let gradientLayer = CAGradientLayer()
+    let numberFormatter: NumberFormatter = {
+        let nf = NumberFormatter()
+        nf.numberStyle = .decimal
+        nf.minimumFractionDigits = 0
+        nf.maximumFractionDigits = 1
+        return nf
+    }()
+    
+    @IBOutlet weak var celsiusLabel: UILabel!
+    @IBOutlet weak var textField: UITextField!
+    var fahreinheitValue: Measurement<UnitTemperature>? {
+        // property observer
+        didSet{
+            updateCelsiusLabel()
+        }
+    }
+    var celsiusValue : Measurement<UnitTemperature>? {
+        if let fahreinheitValue = fahreinheitValue {
+            return fahreinheitValue.converted(to: .celsius)
+        } else {
+            return nil
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("ConversionViewController loaded its view.")
-        
-//        gradientLayer.colors = [UIColor.purple.cgColor, UIColor.blue.cgColor, UIColor.green.cgColor,
-//                                UIColor.yellow.cgColor, UIColor.orange.cgColor, UIColor.red.cgColor]
-//
-//        gradientLayer.frame.size = view.frame.size
-//        view.layer.insertSublayer(gradientLayer, at: 0)
-        
-        
-
-    }
-
-    override func viewWillLayoutSubviews() {
-        //gradientLayer.frame.size = view.frame.size
+        updateCelsiusLabel()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        //let randomColor = UIColor(hue: CGFloat(drand48()), saturation: 1, brightness: 1, alpha: 1)
-        //let layer = CALayer()
-        //layer.backgroundColor = randomColor
-        //layer.frame.size = view.frame.size
-        //view.layer.insertSublayer(layer, at: 0)
-        //view.backgroundColor = randomColor
+    func updateCelsiusLabel(){
+        if let celsiusValue = celsiusValue {
+            celsiusLabel.text = numberFormatter.string(from: NSNumber(value: celsiusValue.value))
+        } else {
+            celsiusLabel.text = "???"
+        }
     }
-
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let existingTextHasDecimalSeparator = textField.text?.range(of: ".")
+        let replacementTextHasDecimalSeparator = string.range(of: ".")
+        
+        if existingTextHasDecimalSeparator != nil,
+           replacementTextHasDecimalSeparator != nil {
+            return false
+        } else {
+            return true
+        }
+    }
+    
+    @IBAction func fahrenheitFieldEditingChanged(_ textfield: UITextField){
+        if let text = textfield.text, let value = Double(text) {
+            fahreinheitValue = Measurement(value: value, unit: .fahrenheit)
+        } else {
+            fahreinheitValue = nil
+        }
+    }
+    
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        textField.resignFirstResponder()
+    }
 }
 
