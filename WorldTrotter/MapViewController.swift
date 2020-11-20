@@ -8,13 +8,18 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate  {
     
     var mapView: MKMapView!
+    var userLocation: CLLocationManager!
     
     override func loadView() {
         mapView = MKMapView()
         view = mapView
+        mapView.delegate = self
+        userLocation = CLLocationManager()
+        userLocation.requestWhenInUseAuthorization()
+        mapView.showsUserLocation = true
         
         let segmentedControl = UISegmentedControl(items: ["Standard", "Hybrid", "Satellite"])
         segmentedControl.backgroundColor = UIColor.systemBackground
@@ -54,6 +59,12 @@ class MapViewController: UIViewController {
         labelLeadingConstraint.isActive = true
         toggleTopConstraint.isActive = true
         toggleLeadingConstraint.isActive = true
+    }
+    
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        let span = MKCoordinateSpan(latitudeDelta: 0.08, longitudeDelta: 0.08)
+        let theRegion = MKCoordinateRegion(center: userLocation.coordinate, span: span)
+        mapView.setRegion(theRegion, animated: true)
     }
     
     @objc func toggleChanged(_ toggle: UISwitch){

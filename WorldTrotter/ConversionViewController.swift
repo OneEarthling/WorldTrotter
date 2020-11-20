@@ -51,6 +51,12 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         let existingTextHasDecimalSeparator = textField.text?.range(of: ".")
         let replacementTextHasDecimalSeparator = string.range(of: ".")
         
+        var numbers = CharacterSet.decimalDigits
+        numbers.insert(charactersIn: ".")
+        guard (string.rangeOfCharacter(from: numbers) != nil) || string.isEmpty else {
+            return false
+        }
+
         if existingTextHasDecimalSeparator != nil,
            replacementTextHasDecimalSeparator != nil {
             return false
