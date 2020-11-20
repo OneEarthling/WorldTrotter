@@ -38,10 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CE351E892567A4A0004FDDEB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		CE351E8A2567A539004FDDEB /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		CE351E942567AA52004FDDEB /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE351E992567AA73004FDDEB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CE351E9D2567B586004FDDEB /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		CE351E9E2567B586004FDDEB /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CE351EA32567B7A0004FDDEB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		CE99AB352563B63B00EB79D7 /* WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE99AB382563B63B00EB79D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE99AB3A2563B63B00EB79D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				en,
 				Base,
 				es,
+				ru,
 			);
 			mainGroup = CE99AB2C2563B63B00EB79D7;
 			productRefGroup = CE99AB362563B63B00EB79D7 /* Products */;
@@ -317,6 +320,7 @@
 			children = (
 				CE351E942567AA52004FDDEB /* es */,
 				CE351E992567AA73004FDDEB /* en */,
+				CE351E9E2567B586004FDDEB /* ru */,
 			);
 			name = Localizable.strings;
 			path = WorldTrotter;
@@ -326,8 +330,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				CE99AB3F2563B63B00EB79D7 /* Base */,
-				CE351E892567A4A0004FDDEB /* en */,
 				CE351E8A2567A539004FDDEB /* es */,
+				CE351E9D2567B586004FDDEB /* ru */,
+				CE351EA32567B7A0004FDDEB /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

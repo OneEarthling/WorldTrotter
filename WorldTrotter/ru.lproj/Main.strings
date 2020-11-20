@@ -1,0 +1,36 @@
+
+/* Class = "UILabel"; text = "???"; ObjectID = "0jz-BD-gh1"; */
+"0jz-BD-gh1.text" = "???";
+
+/* Class = "UILabel"; text = "degrees Celcius"; ObjectID = "4me-gg-mxG"; */
+"4me-gg-mxG.text" = "градусов по Цельсию";
+
+/* Class = "UITabBarItem"; title = "Quiz"; ObjectID = "G7k-hO-MAt"; */
+"G7k-hO-MAt.title" = "Викторина";
+
+/* Class = "UILabel"; text = "100"; ObjectID = "Jln-gL-89s"; */
+"Jln-gL-89s.text" = "100";
+
+/* Class = "UILabel"; text = "is really"; ObjectID = "O9b-e2-bRo"; */
+"O9b-e2-bRo.text" = "это";
+
+/* Class = "UITabBarItem"; title = "Map"; ObjectID = "TC7-pa-g56"; */
+"TC7-pa-g56.title" = "Карта";
+
+/* Class = "UIButton"; normalTitle = "Next Question"; ObjectID = "Z7v-Ac-d68"; */
+"Z7v-Ac-d68.normalTitle" = "Следующий вопрос";
+
+/* Class = "UILabel"; text = "degrees Fahrenheit"; ObjectID = "dt6-bU-hO0"; */
+"dt6-bU-hO0.text" = "градусов по Фаренгейту";
+
+/* Class = "UILabel"; text = "???"; ObjectID = "m6H-dx-gQ7"; */
+"m6H-dx-gQ7.text" = "???";
+
+/* Class = "UITextField"; placeholder = "value"; ObjectID = "qJS-CJ-cpb"; */
+"qJS-CJ-cpb.placeholder" = "значение";
+
+/* Class = "UIButton"; normalTitle = "Show Answer"; ObjectID = "xj2-81-ezd"; */
+"xj2-81-ezd.normalTitle" = "Показать ответ";
+
+/* Class = "UITabBarItem"; title = "Convert"; ObjectID = "xsN-Iu-bX5"; */
+"xsN-Iu-bX5.title" = "Конвертировать";

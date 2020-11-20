@@ -47,7 +47,8 @@ class MapViewController: UIViewController, MKMapViewDelegate  {
         // adding toggle
         let label = UILabel()
         let toggle = UISwitch()
-        label.text = "Points of Interest"
+        let labelString = NSLocalizedString("Points of Interest", comment: "Points of Interest label")
+        label.text = labelString
         label.translatesAutoresizingMaskIntoConstraints = false
         toggle.translatesAutoresizingMaskIntoConstraints = false
         toggle.addTarget(self, action: #selector(toggleChanged(_:)), for: .valueChanged)
